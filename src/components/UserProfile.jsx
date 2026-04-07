@@ -1,18 +1,31 @@
 import "./UserProfile.css";
 
 function UserProfile() {
+  // Logic
+  // const name = "Nguyen Van A";
+  // const avatarUrl = "https://i.pravatar.cc/150?img=12";
+  // const location = "Ha Noi";
+  // const birthYear = "2000";
+  // const skills = ["Html,css", "React,NextJs", "PHP,Laravel,NestJs", "mySQL"];
+  const user = {
+    name: "Nguyen Van A",
+    avatarUrl: "https://i.pravatar.cc/150?img=12",
+    location: "Ha Noi",
+    birthYear: "2000",
+    skills: ["Html,css", "React,NextJs", "PHP,Laravel,NestJs", "mySQL"],
+  };
   return (
-    <div className="User-card">
-      <h2>Nguyen Van A</h2>
-      <img className="avatar" src="https://i.pravatar.cc/150?img=12" alt="" />
-      <p>Ha Noi</p>
-      <p>2.000</p>
-      <h4>Ky nang</h4>
+    <div className="user-card">
+      <h2>{user.name}</h2>
+      <img className="avatar" src={user.avatarUrl} alt="" />
+      <p>Song tai:{user.location}</p>
+      <p>Sinh nam:{user.birthYear}</p>
+      <h4>Ky nang:</h4>
       <ul>
-        <li>Html,css</li>
-        <li>React,NextJs</li>
-        <li>PHP,Laravel,NestJs</li>
-        <li>mySQL</li>
+        <li>{user.skills[0]}</li>
+        <li>{user.skills[1]}</li>
+        <li>{user.skills[2]}</li>
+        <li>{user.skills[3]}</li>
       </ul>
     </div>
   );
