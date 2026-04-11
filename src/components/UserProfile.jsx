@@ -15,10 +15,17 @@ function UserProfile() {
     skills: ["Html,css", "React,NextJs", "PHP,Laravel,NestJs", "mySQL"],
   };
   return (
-    <div className="user-card">
+    <div
+      className="user-card"
+      style={{
+        background: "#f5f5f5f5",
+        padding: "15px",
+        borderRadius: "15px",
+      }}
+    >
       <h2>{user.name}</h2>
       <img className="avatar" src={user.avatarUrl} alt="" />
-      <p>Song tai:{user.location}</p>
+      <p> Song tai:{user.location}</p>
       <p>Sinh nam:{user.birthYear}</p>
       <h4>Ky nang:</h4>
       <ul>
