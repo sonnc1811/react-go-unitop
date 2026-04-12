@@ -6,15 +6,19 @@ import heroImg from "./assets/hero.png";
 import Welcome from "./components/Welcome";
 import { Header, Footer, Sidebar } from "./components/Layout";
 import UserProfile from "./components/Userprofile";
-
+import Child from "./components/Child";
 function App() {
+  // const name = "Cuong";
+  // const birthYear = "1988";
+  const user = {
+    name: "Cuong",
+    birthYear: 1988,
+  };
   return (
     <>
-      {/* <Header />
-      <Welcome />
-      <Sidebar />
-      <Footer /> */}
-      <UserProfile />
+      {/* <Child name={name} birthYear={birthYear} /> */}
+      <Child name={user.name} birthYear={user.birthYear} />
+      {/* <UserProfile /> */}
     </>
   );
 }
