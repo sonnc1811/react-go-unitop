@@ -1,7 +1,4 @@
-function Child(props) {
-  console.log(props);
-  const name = props.name;
-  const birthYear = props.birthYear;
+function Child({ name, birthYear }) {
   return (
     <h1>
       {name}-{birthYear}
