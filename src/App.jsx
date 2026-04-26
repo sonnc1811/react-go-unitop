@@ -8,9 +8,15 @@ import { Header, Footer, Sidebar } from "./components/Layout";
 
 import UserProfile from "./components/UserProfile";
 import { users } from "./data/users";
+import Button from "./components/Button";
+
 function App() {
   return (
     <>
+      {/* <Button>
+        👉Dang ky <strong>nhan uu dai ngay</strong>
+      </Button>
+      <Button>🔑Dang nhap</Button> */}
       {users.map((user) => (
         <UserProfile key={user.id} user={user} />
       ))}
