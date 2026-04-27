@@ -30,7 +30,7 @@ function UserProfile({ user }) {
 
       {user.skills?.length > 0 && (
         <>
-          <h4>Ky nang:</h4>
+          <h4>Kỹ năng:</h4>
           <ul>
             {user.skills.map((skill, index) => (
               <li key={index}> {skill}</li>
