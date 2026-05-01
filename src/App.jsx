@@ -19,7 +19,7 @@ function App() {
   // );
   const FilteredUser = users.filter((user) => {
     return (
-      user.skills.some((s) => s.includes("React")) && user.location == "Hue"
+      user.skills.some((s) => s.includes("React")) && user.location == "Nghe An"
     );
   });
   //JSX =>UI

@@ -3,21 +3,21 @@ import "./UserProfile.css";
 function UserProfile({ user }) {
   //logic
   let ageText = "Chưa cập nhật tuổi";
-
+  const style = {
+    UserCard: {
+      background: "#f5f5f5f5",
+      padding: "15px",
+      borderRadius: "15px",
+    },
+    ageText: { color: "red" },
+  };
   if (user.birthYear) {
     const currentYear = new Date().getFullYear();
     ageText = `Sinh năm: ${user.birthYear} (${currentYear - user.birthYear} tuổi)`;
   }
   //UI-JSX
   return (
-    <div
-      className="user-card"
-      style={{
-        background: "#f5f5f5f5",
-        padding: "15px",
-        borderRadius: "15px",
-      }}
-    >
+    <div className="user-card" style={style.UserCard}>
       <h2>{user.name ?? "Ẩn danh"}</h2>
       {user.avatarUrl && <img className="avatar" src={user.avatarUrl} alt="" />}
       {user.location ? (
@@ -26,7 +26,7 @@ function UserProfile({ user }) {
         <p>Chưa cập nhật địa chỉ</p>
       )}
 
-      <p>{ageText}</p>
+      <p style={style.ageText}>{ageText}</p>
 
       {user.skills?.length > 0 && (
         <>

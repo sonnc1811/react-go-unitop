@@ -41,9 +41,9 @@ const users = [
     },
     {
       id: 6,
-      name: "Nguyen Van c",
+      name: "Nguyen Van C",
       avatarUrl: "https://i.pravatar.cc/150?img=48",
-      location: "Lam Dong",
+      location: "Ha Noi",
       birthYear: "2000",
       skills: ["Html,css", "React,NextJs", "PHP,Laravel,NestJs", "mySQL"],
     },
@@ -69,7 +69,7 @@ const users = [
       avatarUrl: "https://i.pravatar.cc/150?img=55",
       location: "Nghe An",
       birthYear: "2011",
-      skills: ["PHP,Laravel,NestJs", "mySQL"],
+      skills: ["PHP,Laravel,React,NestJs", "mySQL"],
     },
     {
       id: 10,
@@ -78,6 +78,14 @@ const users = [
       location: "Da Nang",
       birthYear: "2014",
       skills: ["Html,css", "NextJs", "PHP,Laravel,NestJs", "mySQL"],
+    },
+    {
+      id: 10,
+      name: "Nguyen Van T",
+      avatarUrl: "https://i.pravatar.cc/150?img=57",
+      location: "Nghe An",
+      birthYear: "2014",
+      skills: ["Html,css", "React,NextJs", "PHP,Laravel,NestJs", "mySQL"],
     },
   ];
   export {users};
