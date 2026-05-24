@@ -12,29 +12,26 @@ function App() {
   // );
   const FilteredUser = users.filter((user) => {
     return (
-      user.skills.some((s) => s.includes("React")) && user.location == "Nghe An"
+      user.skills.some((s) => s.includes("React")) && user.location == "Ha Noi"
     );
   });
   //JSX =>UI
   return (
     <>
-      <div className="flex h-screen justify-center items-center">
-        <button className="bg-pink-500 text-white py-2 px-4 rounded-full hover:bg-pink-600 md:py-3 md:px-5 lg:px-8 cursor-pointer">
-          Click me
-        </button>
-      </div>
-      {/* <h1 className="text-2xl text-red-900 hover:text-blue-700">
-        Hello Tailwind - React Go
-      </h1> */}
-      {/* <Button>
-        👉Dang ky <strong>nhan uu dai ngay</strong>
-      </Button>
-      <Button>🔑Dang nhap</Button> */}
-      {/* {FilteredUser?.length > 0 ? (
-        FilteredUser.map((user) => <UserProfile key={user.id} user={user} />)
-      ) : (
-        <p>Khong tim thay du lieu</p>
-      )} */}
+      <section className="bg-slate-50 px-6 py-8">
+        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-balance text-center">
+          Danh sach Freelancer
+        </h1>
+        <div className="max-w-4xl mx-auto flex flex-col gap-5">
+          {users?.length > 0 ? (
+            users.map((user) => <UserProfile key={user.id} user={user} />)
+          ) : (
+            <p className="text-center text-slate-500 py-10">
+              Khong tim thay du lieu
+            </p>
+          )}
+        </div>
+      </section>
     </>
   );
 }

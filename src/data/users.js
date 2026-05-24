@@ -1,9 +1,9 @@
 const users = [
     {
       id: 1,
-      // name: "Nguyen Van A",
+      name: "Nguyen Van A",
       avatarUrl: "https://i.pravatar.cc/150?img=12",
-      // location: "Ha Noi",
+      location: "Ha Noi",
       birthYear: "1999",
       skills: ["React"],
     },
@@ -17,7 +17,7 @@ const users = [
     },
     {
       id: 3,
-      name: "Nguyen Van E",
+      // name: "Nguyen Van E",
       avatarUrl: "https://i.pravatar.cc/150?img=15",
       location: "Ha Noi",
       birthYear: "1995",
@@ -36,7 +36,7 @@ const users = [
       name: "Nguyen Van A",
       avatarUrl: "https://i.pravatar.cc/150?img=52",
       location: "Ha Noi",
-      birthYear: "2000",
+      // birthYear: "2000",
       skills: ["Html,css", "React,NextJs", "PHP,Laravel,NestJs", "mySQL"],
     },
     {
@@ -80,7 +80,7 @@ const users = [
       skills: ["Html,css", "NextJs", "PHP,Laravel,NestJs", "mySQL"],
     },
     {
-      id: 10,
+      id: 11,
       name: "Nguyen Van T",
       avatarUrl: "https://i.pravatar.cc/150?img=57",
       location: "Nghe An",
