@@ -1,5 +1,3 @@
-// import "./UserProfile.css";
-
 export default function UserProfile({ user }) {
   //logic
   let ageText = "Chưa cập nhật tuổi";
