@@ -1,10 +1,14 @@
-function Header() {
-  return <h1>Day la header</h1>;
+import Header from "./Header";
+import Footer from "./Footer";
+function Layout({ children }) {
+  return (
+    <div className="min-h-screen flex flex-col bg-gray-50">
+      <Header />
+      <main className="flex-1 max-w-4xl mx-auto w-full px-4 py-8">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
 }
-function Footer() {
-  return <footer>Day la footer</footer>;
-}
-function Sidebar() {
-  return <div>Day la sidebar</div>;
-}
-export { Header, Footer, Sidebar };
+export default Layout;
