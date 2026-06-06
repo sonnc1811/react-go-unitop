@@ -2,7 +2,7 @@ const users = [
     {
       id: 1,
       name: "Nguyen Van A",
-      avatarUrl: "https://i.pravatar.cc/150?img=12",
+      avatarUrl: "https://i.pravatar.cc/150?img=5",
       location: "Ha Noi",
       birthYear: "1999",
       skills: ["React"],
