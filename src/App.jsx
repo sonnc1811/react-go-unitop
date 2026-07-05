@@ -7,8 +7,8 @@ function App() {
   //JSX =>UI
   return (
     <>
-      {/* <Homepage /> */}
-      {/* <Aboutpage /> */}
+      {/* <Homepage />
+      <Aboutpage /> */}
       <Freelancerpage />
     </>
   );

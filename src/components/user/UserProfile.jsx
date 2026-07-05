@@ -1,38 +1,13 @@
-export default function UserProfile({ user }) {
-  //logic
-  let ageText = "Chưa cập nhật tuổi";
+import { getInitials, getAgeText } from "../../utils/users";
+import UserAvatar from "./UserAvatar";
 
-  if (user.birthYear) {
-    const currentYear = new Date().getFullYear();
-    ageText = `${currentYear - user.birthYear} tuổi`;
-  }
-  const initials = user.name
-    ? user.name
-        .split(" ")
-        .map((w) => w[0])
-        .join("")
-        .slice(-2)
-        .toUpperCase()
-    : "?";
-  //UI-JSX
+export default function UserProfile({ user }) {
+  const ageText = getAgeText(user.birthYear);
+  const initials = getInitials(user.name);
   return (
     <div className="bg-white border hover:shadow border-slate-200 rounded-xl p-5 flex gap-5">
       {/* avatar */}
-      <div className="shrink-0">
-        <div className="w-16 h-16 rounded-full overflow-hidden bg-slate-200 flex items-center justify-center">
-          {user.avatarUrl ? (
-            <img
-              src={user.avatarUrl}
-              alt={user.name ?? "Avatar"}
-              className="w-full object-cover"
-            />
-          ) : (
-            <span className="text-lg font-semibold text-slate-500">
-              {initials}
-            </span>
-          )}
-        </div>
-      </div>
+      <UserAvatar avatarUrl={user.avatarUrl} name={user.name} size="lg" />
       {/* Info */}
       <div className="flex-1">
         {/* Name+button */}

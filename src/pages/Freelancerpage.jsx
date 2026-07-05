@@ -1,6 +1,7 @@
 import Layout from "../components/layout/Layout";
 import { users } from "../data/users";
 import UserProfile from "../components/user/UserProfile";
+import SectionPage from "../components/layout/Sectionpage";
 function Freelancerpage() {
   //logic
   // const FilteredUser = users.filter((user) => user.location == "Ha Noi");
@@ -15,11 +16,8 @@ function Freelancerpage() {
   //   });
   return (
     <Layout>
-      <section className="bg-slate-50 px-6 py-8">
-        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-balance text-center">
-          Danh sach Freelancer
-        </h1>
-        <div className="max-w-4xl mx-auto flex flex-col gap-5">
+      <SectionPage title="Danh sach Freelancer">
+        <div className="flex flex-col gap-5">
           {users?.length > 0 ? (
             users.map((user) => <UserProfile key={user.id} user={user} />)
           ) : (
@@ -28,7 +26,23 @@ function Freelancerpage() {
             </p>
           )}
         </div>
-      </section>
+      </SectionPage>
+      {/* <section className="bg-slate-50 px-6 py-8">
+        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-balance text-center">
+          Danh sach Freelancer
+        </h1>
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col gap-5">
+            {users?.length > 0 ? (
+              users.map((user) => <UserProfile key={user.id} user={user} />)
+            ) : (
+              <p className="text-center text-slate-500 py-10">
+                Khong tim thay du lieu
+              </p>
+            )}
+          </div>
+        </div>
+      </section> */}
     </Layout>
   );
 }
